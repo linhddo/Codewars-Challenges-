@@ -1,0 +1,15 @@
+#My Answer 
+def validate_pin(pin):
+    if len(pin) != 4 and len(pin) != 6: #check if pin has length of 4 or 6 
+        return False 
+    elif pin.isdigit() == False: #check if pin has digits only 
+        return False 
+    else: 
+        return True
+        
+#Model answer: 
+digits = [str(n) for n in range(10)]
+
+def validate_pin(pin):
+    return (len(pin) == 4 or len(pin) == 6) and all(p in digits for p in pin)
+        
