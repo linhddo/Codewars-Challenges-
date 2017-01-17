@@ -17,4 +17,12 @@ def DNA_strand(dna):
     for char in dna: 
         dna_comp += dna_coding[char] #return value at appropriate key in dict
     return dna_comp
+   
+ # Faster answer 
+ 
+ pairs = {'A':'T','T':'A','C':'G','G':'C'}
+ def DNA_strand(dna):
+    return ''.join([pairs[x] for x in dna])
+    
+ # .join() for string equivalent to .append() for list 
   
