@@ -1,0 +1,14 @@
+def namelist(names):
+    name_str = "" 
+    i = len(names) - 1 
+    for key in names:
+        if i > 1: 
+            name_str = name_str + key["name"] + ", "
+            i -= 1 
+        elif i == 1: 
+            name_str = name_str + key["name"] + " & " 
+            i -= 1
+        else:
+            name_str = name_str + key["name"]
+    return name_str
+        
