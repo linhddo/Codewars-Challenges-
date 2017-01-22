@@ -1,0 +1,12 @@
+def tower_builder(n):
+    return [("*" * (i*2-1)).center(n*2-1) for i in range(1, n+1)]
+    
+def tower_builder(n_floors):
+    tower = []
+    i = 1 
+    while n_floors > 0: 
+        tower.extend([" " * (n_floors - 1) + "*" * i + " " * (n_floors - 1)])
+        n_floors -= 1 
+        i += 2 
+    return tower
+    
